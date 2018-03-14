@@ -19,5 +19,6 @@ from showscore import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test/', views.test, name='test'),
+    path('index/', views.index, name='index'),
+    path('collect/', views.collect, name='collect'),
 ]
