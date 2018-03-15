@@ -4,12 +4,12 @@
 <table  class="table table-bordered table-hover" style="width:100%">
     <thead>
     <tr>
-        <th style='text-align: center;'>番剧分数</th>
-        <th style='text-align: center;'>评分人数</th>
-        <th style='text-align: center;'>番名</th>
+        <th style='text-align: center;width:10%'>番剧分数</th>
+        <th style='text-align: center;width:10%'>评分人数</th>
+        <th style='text-align: center;width:10%'>番名</th>
         <th style='text-align: center;'>简介</th>
-        <th style='text-align: center;'>播放次数</th>
-        <th style='text-align: center;'>开播时间</th>
+        <th style='text-align: center;width:10%'>播放次数</th>
+        <th style='text-align: center;width:10%'>开播时间</th>
     </tr>
     </thead>
     <tbody>
@@ -17,10 +17,10 @@
     {% for a in anime %}
 
     <tr >
-        <td >{{ a.score }}</td>
+        <td align="center">{{ a.score }}</td>
         <td  align="center">{{ a.count }}</td>
         <td  align="center">{{ a.title }}</td>
-        <td  align="center">{{ a.brief }}</td>
+        <td >{{ a.brief }}</td>
         <td  align="center">{{ a.play_count }}</td>
         <td  align="center">{{ a.pub_time }}</td>
     </tr>

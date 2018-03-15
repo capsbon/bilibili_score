@@ -1,3 +1,5 @@
+import os
+import csv
 import json
 import requests
 from lxml import etree
@@ -87,3 +89,33 @@ def save_to_db(bgmid):
     s = Score(bangumi_id=bangumi_id,score=score,count=count,brief=brief,
               play_count=play_count,pub_time=pub_time,cover=cover,title=title)
     s.save()
+
+def export_csv(request):
+    all_s = Score.objects.order_by("-score", "-count")
+    base_dir = os.path.abspath(os.path.dirname(__file__))
+    csv_dir = os.path.join(base_dir,'..','csv_file')
+    if not os.path.exists(csv_dir):
+        os.mkdir(csv_dir)
+    csvpath = os.path.join(base_dir,'..','csv_file','anime_score.csv')
+    with open(csvpath,'w',encoding='utf-8') as csvfile:
+        writer = csv.writer(csvfile)
+        #先写入columns_name
+        writer.writerow(["番剧id","分数","评分人数","番剧名","番剧简介","播放次数","播放时间"])
+        for s in all_s:
+            single_list = []
+            single_list.append(s.bangumi_id)
+            single_list.append(s.score)
+            single_list.append(s.count)
+            single_list.append(s.title)
+            single_list.append(s.brief)
+            single_list.append(s.play_count)
+            single_list.append(s.pub_time)
+            writer.writerow(single_list)
+        csvfile.close()
+    with open(csvpath,encoding='utf-8') as f:
+        c = f.read()
+    response = HttpResponse(c)
+    filename = os.path.basename(csvpath)
+    response['Content-Type']='application/octet-stream'
+    response['Content-Disposition']='attachment;filename={0}'.format(filename)
+    return response

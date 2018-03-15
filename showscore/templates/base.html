@@ -5,7 +5,7 @@
     <script src="/static/jquery.min.js"></script>
     <script src="/static/bootstrap.min.js"></script>
     <meta charset="UTF-8">
-    <title>Vacancies</title>
+    <title>B站番剧分数排名</title>
 </head>
 <body>
     <nav class="navbar navbar-default" role="navigation">
@@ -13,7 +13,13 @@
 	<div class="navbar-header">
 		<a class="navbar-brand"  href="/index">B站番剧分数排名</a>
 	</div>
-
+    <div>
+		<ul class="nav navbar-nav">
+            <li><a href="/export">
+            导出csv文件
+            </a></li>
+		</ul>
+	</div>
 	</div>
 </nav>
     {% block content %}

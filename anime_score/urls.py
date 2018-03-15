@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', views.index, name='index'),
     path('collect/', views.collect, name='collect'),
+    path('export/', views.export_csv, name='export_csv'),
 ]
