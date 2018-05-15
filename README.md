@@ -44,7 +44,43 @@ firewall-cmd --reload
 5.生成表
 
 ```
-python manage.py makemigrations
-python manage.py migrate
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
+
+6.安装所需库
+
+```
+pip3 install -r requirements.txt
+```
+
+7.修改settings.py添加要部署的主机地址
+
+找到ALLOWED_HOST改为
+
+```
+ALLOWED_HOSTS = ['127.0.0.1','45.32.14.42','localhost','score.wangzhigang.org']
+```
+
+8.以守护进程运行在80端口
+
+```
+nohup python3 manage.py runserver 0:80 &
+```
+
+ps.
+
+git本地仓库强行覆盖远程仓库
+
+```
+git push origin master -f
+```
+
+远程仓库强行覆盖本地
+
+```
+git fetch --all  
+git reset --hard origin/master 
+git pull origin master
 ```
 
