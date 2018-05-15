@@ -83,8 +83,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/showscore/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="220">
+              <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
               <folding>
                 <element signature="n#style#0;n#table#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#body#0;n#!!top" expanded="true" />
@@ -130,16 +130,16 @@
         <option value="$PROJECT_DIR$/anime_score/__init__.py" />
         <option value="$PROJECT_DIR$/showscore/urls.py" />
         <option value="$PROJECT_DIR$/showscore/models.py" />
-        <option value="$PROJECT_DIR$/showscore/templates/index.html" />
         <option value="$PROJECT_DIR$/anime_score/urls.py" />
         <option value="$PROJECT_DIR$/showscore/templates/base.html" />
         <option value="$PROJECT_DIR$/showscore/views.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/anime_score/settings.py" />
+        <option value="$PROJECT_DIR$/showscore/templates/index.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="width" value="1227" />
     <option name="height" value="828" />
   </component>
@@ -200,7 +200,7 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17156473" />
@@ -590,8 +590,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/showscore/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="220">
+          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
           <folding>
             <element signature="n#style#0;n#table#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#body#0;n#!!top" expanded="true" />

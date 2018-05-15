@@ -25,7 +25,7 @@ SECRET_KEY = '&f%)$wodcnwmv&hahg+7x!xahog6w7d-)!u-v%2b)fu@9xz*-^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','45.32.14.42','localhost']
 
 
 # Application definition
