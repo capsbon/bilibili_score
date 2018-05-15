@@ -78,9 +78,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'bangumi',
-        'USER': 'fnst',
-        'PASSWORD': 'Fnst.1234',    ## 安装 mysql 数据库时，输入的 root 用户的密码
-        'HOST': '173.199.118.8',
+        'USER': 'wzg',
+        'PASSWORD': 'Wzg.1234',    ## 安装 mysql 数据库时，输入的 root 用户的密码
+        'HOST': '45.32.14.42',
     }
 }
 
