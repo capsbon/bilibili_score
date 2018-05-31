@@ -4,7 +4,11 @@ import json
 import requests
 from lxml import etree
 from django.shortcuts import render
+from django.core.paginator import Paginator
 from showscore.models import Score
+from django.core.paginator import Paginator
+from django.core.paginator import EmptyPage
+from django.core.paginator import PageNotAnInteger
 
 # Create your views here.
 from django.http import HttpResponse
@@ -20,7 +24,16 @@ headers = {
 #?callback=seasonListCallback
 def index(request):
     #anime_data = Score.objects.all()
+    limit = 20
     anime_data = Score.objects.order_by("-score", "-count")
+    paginator = Paginator(anime_data, limit)
+    page = request.GET.get('page')
+    try:
+        anime_data = paginator.page(page)
+    except PageNotAnInteger:
+        anime_data = paginator.page(1)
+    except EmptyPage:
+        anime_data = paginator.page(paginator.num_pages)
     context = {
         'anime':anime_data,
     }
@@ -119,3 +132,5 @@ def export_csv(request):
     response['Content-Type']='application/octet-stream'
     response['Content-Disposition']='attachment;filename={0}'.format(filename)
     return response
+
+
